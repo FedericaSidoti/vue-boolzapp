@@ -43,12 +43,12 @@
                     <input class="input" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <ul class="contacts">
-                    <li class="contact active">
+                    <li v-for="(contact,index) in contacts" class="contact">
                         <div class="avatar-wrap">
-                            <img class="avatar" src="./img/avatar_1.jpg">
+                            <img class="avatar" :src="contact.avatar">
                         </div>
                         <div class="name-wrap">
-                            <p class="name">Michele</p>
+                            <p class="name">{{contact.name}}</p>
                             <p>Ultimo messaggio</p>
                         </div>
                         <div class="date-wrap">

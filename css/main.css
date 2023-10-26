@@ -1,0 +1,68 @@
+/*RESET*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+menu {
+    list-style: none;
+}
+
+.body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header {
+    height: 80px;
+}
+
+.page-content {
+    flex-grow: 1;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1600px;
+    position: relative;
+    top: -50px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.content-header {
+    height: 60px;
+}
+
+.main-area {
+    flex-grow: 1;
+}
+
+
+/*DEBUG*/
+
+.debug .page-header {
+    background-color: aquamarine;
+}
+
+.debug .page-content {
+    background-color: bisque;
+}
+
+.debug .container {
+    background-color: blueviolet;
+    height: 900px;
+}
+
+.debug .content-header {
+    background-color: blue;
+}
+
+.debug .main-area {
+    background-color: azure;
+}

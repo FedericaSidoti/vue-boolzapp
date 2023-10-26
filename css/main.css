@@ -85,6 +85,7 @@ menu {
     color: var(--dark-gray);
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 /*CONTACT*/

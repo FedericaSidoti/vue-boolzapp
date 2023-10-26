@@ -43,7 +43,7 @@
                     <input class="input" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <ul class="contacts">
-                    <li v-for="(contact,index) in contacts" class="contact">
+                    <li v-for="(contact, index) in contacts" :key="index" class="contact" @click="doActive(index)" :class="currentIndex ===index? 'active' : '' ">
                         <div class="avatar-wrap">
                             <img class="avatar" :src="contact.avatar">
                         </div>
@@ -60,10 +60,10 @@
             <div class="main-area">
                 <div class="area-header">
                     <div class="avatar-wrap">
-                        <img class="avatar" src="./img/avatar_1.jpg">
+                        <img class="avatar" :src="contacts[currentIndex].avatar">
                     </div>
                     <div class="name">
-                        <p>Michele</p>
+                        <p>{{contacts[currentIndex].name}}</p>
                     </div>
                     <div class="icon-wrap">
                         <i class="fa-solid fa-circle-notch"></i>

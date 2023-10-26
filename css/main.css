@@ -12,36 +12,48 @@ menu {
     list-style: none;
 }
 
+/*Layout*/
 .body {
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
+.container {
+    margin: 0 auto;
+    max-width: 1600px;
+    position: relative;
+    top: -70px; 
+    display: flex;
+}
+
+/*CONTENITORI DI BACKGROUND*/
+
 .page-header {
-    height: 80px;
+    height: 100px;
 }
 
 .page-content {
     flex-grow: 1;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1600px;
-    position: relative;
-    top: -50px; 
-    display: flex;
-    flex-direction: column;
-}
-
-.content-header {
-    height: 60px;
-}
+/*MAIN AREA*/
 
 .main-area {
     flex-grow: 1;
 }
+
+.area-header {
+    height: 60px; 
+    border: 1px solid black;
+}
+
+/*CONTACT*/
+.contact-area {
+    width: 600px;
+}
+
+/*CHAT*/
 
 
 /*DEBUG*/
@@ -65,4 +77,8 @@ menu {
 
 .debug .main-area {
     background-color: azure;
+}
+
+.debug .area-header{
+    background-color: red;
 }

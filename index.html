@@ -4,21 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
+    <script src="https://kit.fontawesome.com/a095a4bfbe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body class="body debug" >
+<body class="body debu" >
     <header class="page-header"></header>
     <main class="page-content" id="app">
         <div class="container">
             <aside class="contact-area">
                 <div class="area-header">
+                    <div class="avatar-wrap">
+                        <img class="avatar" src="./img/avatar_io.jpg">
+                    </div>
+                    <div class="name">
+                        <p>Sofia</p>
+                    </div>
+                    <div class="icon-wrap">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
                 </div>
-                <div class="notifications"></div>
-                <div class="search"></div>
-                <div class="contacts"></div>
+                <div class="notifications">
+                    <div class="avatar-wrap">
+                        <div class="icon-blue">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                    </div>
+                    <div class="text-wrap">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <p class="underlined">Attiva notifiche desktop</p>
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="icon-wrap lens">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <input class="input" type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <ul class="contacts">
+                    <li class="contact active">
+                        <div class="avatar-wrap">
+                            <img class="avatar" src="./img/avatar_1.jpg">
+                        </div>
+                        <div class="name-wrap">
+                            <p class="name">Michele</p>
+                            <p>Ultimo messaggio</p>
+                        </div>
+                        <div class="date-wrap">
+                            <p class="date"> 12.00</p>
+                        </div>
+                    </li>
+                </ul>
             </aside>
             <div class="main-area">
-                <div class="area-header"></div>
+                <div class="area-header">
+                    <div class="avatar-wrap">
+                        <img class="avatar" src="./img/avatar_1.jpg">
+                    </div>
+                    <div class="name">
+                        <p>Michele</p>
+                    </div>
+                    <div class="icon-wrap">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
                 <div class="chat-area"></div>
                 <div class="input-bar"></div>
             </div>

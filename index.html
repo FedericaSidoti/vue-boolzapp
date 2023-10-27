@@ -72,14 +72,9 @@
                     </div>
                 </div>
                 <div class="chat-area">
-                    <div class="container-fluid">
-                        <div class="message">
-                            <p>Ok</p>
-                        </div>
-                    </div>
-                    <div class="container-fluid rec-wrap">
-                        <div class="message rec-msg">
-                            <p>Non è ok smettila di prenderti in giro</p>
+                    <div class="container-fluid" v-for="(message,index) in contacts[currentIndex].messages" :class="message.status==='received'? 'rec-wrap' : '' ">
+                        <div class="message" :class="message.status==='received'? 'rec-msg' : '' ">
+                            <p>{{message.message}}</p>
                         </div>
                     </div>
                 </div>

@@ -24,37 +24,24 @@ menu {
 
 /*Layout*/
 .body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
     font-family: Arial, Helvetica, sans-serif
+}
+
+/*CONTENITORI*/
+
+.page-content {
+    height: 100vh;
+    background: linear-gradient(var(--dark-green) 18%, 0%, var(--dark-gray) 82%);
+    padding: 50px;
+    overflow: hidden;
 }
 
 .container {
     margin: 0 auto;
     max-width: 1600px;
-    position: absolute;
-    top: 40px; 
-    left: 100px;
-    right: 100px;
-    bottom: 20px;
     display: flex;
-    height: 90%;
     overflow: hidden;
-}
-
-/*CONTENITORI DI BACKGROUND*/
-
-.page-header {
-    height: 150px;
-    background-color: var(--dark-green);
-}
-
-.page-content {
-    flex-grow: 1;
-    background-color: var(--dark-gray);
+    height: 98%;
 }
 
 /*CONTACT*/

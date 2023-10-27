@@ -175,13 +175,25 @@ createApp({
             this.currentIndex = index
         },
         sendMessage() {
-            const newMessage = {
+            const newMessageSent = {
                 date: '10/01/2020 15:50:00',
                 message: this.inputValue,
                 status: 'sent'
             }
 
-            this.contacts[this.currentIndex].messages.push(newMessage)
+            this.contacts[this.currentIndex].messages.push(newMessageSent)
+            this.inputValue = ''
+
+            setTimeout(() => {
+                const newMessageReceived = {
+                    date: '10/01/2020 15:50:00',
+                    message: 'ok',
+                    status: 'received'
+                }
+
+                this.contacts[this.currentIndex].messages.push(newMessageReceived)
+            }, 1000);
+
         }
     },
     mounted() {

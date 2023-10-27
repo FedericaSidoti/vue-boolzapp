@@ -44,7 +44,7 @@ menu {
     height: 98%;
 }
 
-/*CONTACT*/
+/*CONTACTS*/
 .contact-area {
     width: 600px;
     display: flex;
@@ -73,8 +73,8 @@ menu {
     padding: 5px;
     background-color: var(--blue);
     display: flex;
+    font-size: 20px;
 }
-
 
 .icon-blue {
     color: var(--blue);
@@ -114,6 +114,10 @@ menu {
     align-items: flex-start;
     padding: 10px 0;
     border-bottom: 1px solid var(--dark-gray);
+}
+
+.contact:hover {
+    background-color: var(--gray);
 }
 
 .name-wrap {
@@ -169,7 +173,7 @@ menu {
 
 .input-bar {
     background-color: white;
-    padding: 10px;
+    padding: 10px 0;
     display: flex;
     min-height: 70px;
     align-items: center;

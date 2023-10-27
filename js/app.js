@@ -208,9 +208,7 @@ createApp({
 
             for(let i = 0; i < this.contacts.length; i++) {
                 const currentContact = this.contacts[i]
-                console.log(currentContact)
-                const currentName = currentContact.name
-                console.log(currentName, searchString)
+                const currentName = currentContact.name.toLowerCase()
                 if (currentName.includes(searchString)) {
                     currentContact.visible = true
                     console.log(currentContact.visible, 'true')

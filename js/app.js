@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             currentIndex : 0,
+            inputValue : '',
             contacts: [
                 {
                 name: 'Michele',
@@ -172,6 +173,15 @@ createApp({
     methods: {
         doActive(index) {
             this.currentIndex = index
+        },
+        sendMessage() {
+            const newMessage = {
+                date: '10/01/2020 15:50:00',
+                message: this.inputValue,
+                status: 'sent'
+            }
+
+            this.contacts[this.currentIndex].messages.push(newMessage)
         }
     },
     mounted() {

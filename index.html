@@ -82,7 +82,7 @@
                     <div class="icon-wrap lens">
                         <i class="fa-solid fa-message"></i>
                     </div>
-                    <input class="input" type="text" placeholder="Scrivi messaggio">
+                    <input class="input" type="text" placeholder="Scrivi messaggio" v-model="inputValue" @keyup.enter="sendMessage()" >
                     <div class="icon-wrap lens">
                         <i class="fa-solid fa-message"></i>
                     </div>

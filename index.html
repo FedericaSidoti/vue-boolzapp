@@ -40,19 +40,21 @@
                     <div class="icon-wrap lens">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <input class="input" type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input class="input" type="text" v-model="searchValue" @keyup="checkNames" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <ul class="contacts">
-                    <li v-for="(contact, index) in contacts" :key="index" class="contact" @click="doActive(index)" :class="currentIndex ===index? 'active' : '' ">
-                        <div class="avatar-wrap">
-                            <img class="avatar" :src="contact.avatar">
-                        </div>
-                        <div class="name-wrap">
-                            <p class="name">{{contact.name}}</p>
-                            <p>Ultimo messaggio</p>
-                        </div>
-                        <div class="date-wrap">
-                            <p class="date"> 12.00</p>
+                    <li v-for="(contact, index) in contacts" :key="index"  @click="doActive(index)" :class="currentIndex ===index? 'active' : '' ">
+                        <div class="contact" v-if="contact.visible===true">
+                            <div class="avatar-wrap">
+                                <img class="avatar" :src="contact.avatar">
+                            </div>
+                            <div class="name-wrap">
+                                <p class="name">{{contact.name}}</p>
+                                <p>Ultimo messaggio</p>
+                            </div>
+                            <div class="date-wrap">
+                                <p class="date"> 12.00</p>
+                            </div>
                         </div>
                     </li>
                 </ul>

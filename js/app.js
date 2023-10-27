@@ -5,6 +5,8 @@ createApp({
         return {
             currentIndex : 0,
             inputValue : '',
+            searchValue : '',
+            lettersArray: [],
             contacts: [
                 {
                 name: 'Michele',
@@ -174,26 +176,50 @@ createApp({
         doActive(index) {
             this.currentIndex = index
         },
+
         sendMessage() {
             const newMessageSent = {
                 date: '10/01/2020 15:50:00',
                 message: this.inputValue,
                 status: 'sent'
             }
-
             this.contacts[this.currentIndex].messages.push(newMessageSent)
             this.inputValue = ''
-
             setTimeout(() => {
                 const newMessageReceived = {
                     date: '10/01/2020 15:50:00',
                     message: 'ok',
                     status: 'received'
                 }
-
                 this.contacts[this.currentIndex].messages.push(newMessageReceived)
             }, 1000);
+        },
 
+        searchChat(){
+            
+        },
+
+        checkNames() {
+
+            this.lettersArray.push(this.searchValue) ;
+            const searchLast = this.lettersArray.slice(-1);
+            const searchString = searchLast.toString()
+            console.log(searchLast, searchString)
+
+            for(let i = 0; i < this.contacts.length; i++) {
+                const currentContact = this.contacts[i]
+                console.log(currentContact)
+                const currentName = currentContact.name
+                console.log(currentName, searchString)
+                if (currentName.includes(searchString)) {
+                    currentContact.visible = true
+                    console.log(currentContact.visible, 'true')
+                    
+                } else {
+                    currentContact.visible = false
+                    console.log(currentContact.visible, 'false')
+                }
+            }
         }
     },
     mounted() {

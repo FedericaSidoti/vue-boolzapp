@@ -206,9 +206,9 @@ menu {
 }
 
 
-.btn-delete {
+.btn-drop {
     border: none;
-    font-size: 25px;
+    font-size: 20px;
     background-color: transparent;
     color: var(--dark-gray);
     display: none;
@@ -218,7 +218,7 @@ menu {
     bottom: 10px;
 }
 
-.message:hover .btn-delete {
+.message:hover .btn-drop {
     display: inline-block;
 }
 

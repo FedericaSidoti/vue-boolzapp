@@ -203,6 +203,7 @@ menu {
     font-size: 25px;
     background-color: var(--light-green);
     position: relative;
+    display: flex;
 }
 
 
@@ -218,9 +219,31 @@ menu {
     bottom: 10px;
 }
 
+.dropdown {
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    font-size: 15px;
+    right: 0;
+    background-color: white;
+    box-shadow: 5px 10px 8px var(--dark-gray);
+    padding: 30px;
+    gap: 10px;
+    display: none;
+}
+
+option {
+    padding: 10px;
+}
+
+.check {
+    appearance: none;
+}
+
 .message:hover .btn-drop {
     display: inline-block;
 }
+
 
 .input {
     background-color: var(--gray);

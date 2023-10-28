@@ -7,6 +7,7 @@ createApp({
             inputValue : '',
             searchValue : '',
             lettersArray: [],
+            active : false,
             newDate : new Date(),
             contacts: [
                 {
@@ -225,6 +226,9 @@ createApp({
                     minutes = '0' + this.newDate.getMinutes();
                 }
             return minutes     
+        },
+        doActive (index) {
+            
         }
     },
     mounted() {

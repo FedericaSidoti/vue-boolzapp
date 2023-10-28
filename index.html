@@ -49,7 +49,7 @@
                             </div>
                             <div class="name-wrap">
                                 <p class="name">{{contact.name}}</p>
-                                <p>Ultimo messaggio</p>
+                                <p>{{contact.messages[contact.messages.length-1].message}}</p>
                             </div>
                             <div class="date-wrap">
                                 <p class="date"> 12.00</p>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="chat-area">
-                    <div class="container-fluid" v-for="(message,index) in contacts[currentIndex].messages" :class="message.status==='received'? 'rec-wrap' : '' ">
+                    <div class="container-fluid" v-for="(message,index) in contacts[currentIndex].messages" :class="message.status==='received'? 'rec-wrap' : ''">
                         <div class="message" :class="message.status==='received'? 'rec-msg' : '' ">
                             <p>{{message.message}}</p>
                         </div>

@@ -132,6 +132,16 @@ menu {
     margin-right: 10px
 }
 
+.date {
+    text-wrap: nowrap;
+    color: var(--dark-gray);
+}
+
+.date-stamp {
+    font-size: 15px;
+    text-align: right;
+}
+
 /*CHAT*/
 .main-area {
     flex-grow: 1;

@@ -227,9 +227,6 @@ createApp({
                 }
             return minutes     
         },
-        doActive (index) {
-            
-        }
     },
     mounted() {
         console.log('ok')

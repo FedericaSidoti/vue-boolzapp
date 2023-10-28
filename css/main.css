@@ -198,10 +198,28 @@ menu {
 }
 
 .message {
-    padding: 10px;
+    padding: 10px 40px;
     border-radius: 20px;
     font-size: 25px;
     background-color: var(--light-green);
+    position: relative;
+}
+
+
+.btn-delete {
+    border: none;
+    font-size: 25px;
+    background-color: transparent;
+    color: var(--dark-gray);
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+}
+
+.message:hover .btn-delete {
+    display: inline-block;
 }
 
 .input {

@@ -75,8 +75,11 @@
                 <div class="chat-area">
                     <div class="container-fluid" v-for="(message,index) in contacts[currentIndex].messages" :class="message.status==='received'? 'rec-wrap' : ''">
                         <div class="message" :class="message.status==='received'? 'rec-msg' : '' ">
-                            <p>{{message.message}}</p>
-                            <p class="date date-stamp">{{message.date}}</p>
+                                <p>{{message.message}}</p>
+                                <p class="date date-stamp">{{message.date}}</p>
+                            <button class="btn-delete">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -195,14 +195,12 @@ createApp({
                     status: 'received'
                 }
                 
-
                 this.contacts[this.currentIndex].messages.push(newMessageReceived)
                 
             }, 1000);
         },
 
         checkNames() {
-
             this.lettersArray.push(this.searchValue) ;
             const searchLast = this.lettersArray.slice(-1);
             const searchString = searchLast.toString()

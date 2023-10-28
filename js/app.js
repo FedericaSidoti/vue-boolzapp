@@ -7,6 +7,7 @@ createApp({
             inputValue : '',
             searchValue : '',
             lettersArray: [],
+            newDate : new Date(),
             contacts: [
                 {
                 name: 'Michele',
@@ -178,25 +179,26 @@ createApp({
         },
 
         sendMessage() {
+            let minutes= this.getMinutesRight()
             const newMessageSent = {
-                date: '10/01/2020 15:50:00',
+                date: this.newDate.getHours() + ':' + minutes ,
                 message: this.inputValue,
                 status: 'sent'
             }
             this.contacts[this.currentIndex].messages.push(newMessageSent)
             this.inputValue = ''
             setTimeout(() => {
+                let minutes= this.getMinutesRight()
                 const newMessageReceived = {
-                    date: '10/01/2020 15:50:00',
+                    date: this.newDate.getHours() + ':' + minutes,
                     message: 'ok',
                     status: 'received'
                 }
-                this.contacts[this.currentIndex].messages.push(newMessageReceived)
-            }, 1000);
-        },
+                
 
-        searchChat(){
-            
+                this.contacts[this.currentIndex].messages.push(newMessageReceived)
+                
+            }, 1000);
         },
 
         checkNames() {
@@ -218,6 +220,13 @@ createApp({
                     console.log(currentContact.visible, 'false')
                 }
             }
+        },
+        getMinutesRight() {
+            let minutes = this.newDate.getMinutes()
+                if (minutes.length===1) {
+                    minutes = '0' + this.newDate.getMinutes();
+                }
+            return minutes     
         }
     },
     mounted() {

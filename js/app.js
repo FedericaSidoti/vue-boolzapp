@@ -4,8 +4,10 @@ createApp({
     data() {
         return {
             currentIndex : 0,
+            currentMessage : 0,
             inputValue : '',
             searchValue : '',
+            show : false, 
             lettersArray: [],
             active : false,
             newDate : new Date(),
@@ -227,6 +229,14 @@ createApp({
                 }
             return minutes     
         },
+        showOptions(index) {
+            this.currentMessage = index
+            this.show = !this.show; 
+        },
+        deleteMessage(index) {
+            console.log('click')
+            this.contacts[this.currentIndex].messages.splice(index, 1)
+        }
     },
     mounted() {
         console.log('ok')

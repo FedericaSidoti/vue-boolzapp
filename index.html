@@ -79,12 +79,13 @@
                                 <p>{{message.message}}</p>
                                 <p class="date date-stamp">{{message.date}}</p>
                             </div>
-                            <select class="btn-drop" name="options">
+                            <div class="btn-drop" name="options" @click="showOptions(index)">
                                 <i class="fa-solid fa-chevron-down"></i>
-                                <option hidden></option>
-                                <option value="0">Informazioni</option>
-                                <option value="1">Elimina</option>
-                            </select>
+                            </div>
+                            <div v-if="this.show===true && index===this.currentMessage" id="select" class='select'>
+                                <div class="option">Informazioni</div>
+                                <div class="option" @click="deleteMessage(index)">Elimina</div>
+                            </div>
                         </div>
                     </div>
                 </div>

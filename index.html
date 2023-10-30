@@ -74,15 +74,15 @@
                 </div>
                 <div class="chat-area">
                     <div class="container-fluid" v-for="(message,index) in contacts[currentIndex].messages" :class="message.status==='received'? 'rec-wrap' : ''">
-                        <div class="message" :class="message.status==='received'? 'rec-msg' : '' ">
-                            <div>
+                        <div class="message" :class="message.status==='received'? 'rec-msg' : '' " >
+                            <div @mouseleave="this.show=false">
                                 <p>{{message.message}}</p>
                                 <p class="date date-stamp">{{message.date}}</p>
                             </div>
-                            <div class="btn-drop" name="options" @click="showOptions(index)">
+                            <div class="btn-drop" name="options" @click="toggleOptions(index)">
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
-                            <div v-if="this.show===true && index===this.currentMessage" id="select" class='select'>
+                            <div v-show="show===true && index===currentMessage" id="select" class='select' @mouseleave="this.show=false">
                                 <div class="option">Informazioni</div>
                                 <div class="option" @click="deleteMessage(index)">Elimina</div>
                             </div>

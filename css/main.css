@@ -236,7 +236,7 @@ menu {
 }
 
 .message:hover .btn-drop {
-    display: flex;
+    display: block;
 }
 
 
@@ -267,6 +267,10 @@ menu {
 
 .d-block {
     display: display-block;
+}
+
+.d-none {
+    display: none
 }
 
 /*DEBUG*/

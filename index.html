@@ -49,9 +49,10 @@
                             </div>
                             <div class="name-wrap">
                                 <p class="name">{{contact.name}}</p>
-                                <p>{{contact.messages[contact.messages.length-1].message}}</p>
+                                <p v-if="contact.messages.length > 0">{{contact.messages[contact.messages.length-1].message}}</p>
+                                <p v-else>Non hai ancora avviato una conversazione</p>
                             </div>
-                            <div class="date-wrap">
+                            <div v-if="contact.messages.length > 0" class="date-wrap">
                                 <p class="date"> {{contact.messages[contact.messages.length-1].date}}</p>
                             </div>
                         </div>
@@ -75,7 +76,7 @@
                 <div class="chat-area">
                     <div class="container-fluid" v-for="(message,index) in contacts[currentIndex].messages" :class="message.status==='received'? 'rec-wrap' : ''">
                         <div class="message" :class="message.status==='received'? 'rec-msg' : '' " >
-                            <div @mouseleave="this.show=false">
+                            <div @mouseleave="show=false">
                                 <p>{{message.message}}</p>
                                 <p class="date date-stamp">{{message.date}}</p>
                             </div>

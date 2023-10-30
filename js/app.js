@@ -236,9 +236,8 @@ createApp({
         },
         deleteMessage(index) {
             console.log('click')
-            this.contacts[this.currentIndex].messages.splice(index, 1)
-            console.log(index)
             this.show = false
+            this.contacts[this.currentIndex].messages.splice(index, 1)
         }
     },
     mounted() {

@@ -8,7 +8,6 @@ createApp({
             inputValue : '',
             searchValue : '',
             show : false, 
-            deleteShow : false,
             lettersArray: [],
             active : false,
             newDate : new Date(),
@@ -238,6 +237,7 @@ createApp({
             console.log('click')
             this.show = false
             this.contacts[this.currentIndex].messages.splice(index, 1)
+            this.deleteShow = true
         }
     },
     mounted() {
